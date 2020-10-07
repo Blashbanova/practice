@@ -58,4 +58,15 @@ public class PointsTest {
         assertNotEquals(result.y, Double.NaN);
         assertNotEquals(result.z, Double.NaN);
     }
+
+    @Test
+    public void testEnlarge(){
+        Point result = Points.enlarge(getFirstPoint(),2);
+        assertEquals(result.x, 5.4, DELTA);
+        assertEquals(result.y, 9.4, DELTA);
+        assertEquals(result.z, 5.8, DELTA);
+        assertNotEquals(result.x, Double.NaN);
+        assertNotEquals(result.y, Double.NaN);
+        assertNotEquals(result.z, Double.NaN);
+    }
 }
