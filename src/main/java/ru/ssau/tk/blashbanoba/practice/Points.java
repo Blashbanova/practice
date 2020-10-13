@@ -29,11 +29,22 @@ public class Points {
     }
 
     public static Point opposite(Point point) {
-        return point = new Point(-point.x, -point.y, -point.z);
+        return new Point(-point.x, -point.y, -point.z);
     }
 
     public static Point inverse(Point point) {
         Point anotherPoint = new Point(1, 1, 1);
-        return point = Points.divide(anotherPoint, point);
+        return Points.divide(anotherPoint, point);
+    }
+
+    public static double scalarProduct(Point firstVector, Point secondVector) {
+        return firstVector.x * secondVector.x + firstVector.y * secondVector.y + firstVector.z * secondVector.z;
+    }
+
+    public static Point vectorProduct(Point firstVector, Point secondVector) {
+        double newX = firstVector.y * secondVector.z - firstVector.z * secondVector.y;
+        double newY = firstVector.z * secondVector.x - firstVector.x * secondVector.z;
+        double newZ = firstVector.x * secondVector.y - firstVector.y + secondVector.x;
+        return new Point(newX, newY, newZ);
     }
 }
