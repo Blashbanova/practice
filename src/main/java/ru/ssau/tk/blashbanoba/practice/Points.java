@@ -24,7 +24,16 @@ public class Points {
         return new Point(number * firstPoint.x, number * firstPoint.y, number * firstPoint.z);
     }
 
-    public static double length(Point point){
+    public static double length(Point point) {
         return point.lenght();
+    }
+
+    public static Point opposite(Point point) {
+        return point = new Point(-point.x, -point.y, -point.z);
+    }
+
+    public static Point inverse(Point point) {
+        Point anotherPoint = new Point(1, 1, 1);
+        return point = Points.divide(anotherPoint, point);
     }
 }
