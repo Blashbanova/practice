@@ -28,7 +28,7 @@ public class PointsTest {
 
     @Test
     public void testSubtract() {
-        Point result = Points.subtract(getFirstPoint(),getSecondPoint());
+        Point result = Points.subtract(getFirstPoint(), getSecondPoint());
         assertEquals(result.x, 2.5, DELTA);
         assertEquals(result.y, 2.6, DELTA);
         assertEquals(result.z, -6.4, DELTA);
@@ -39,7 +39,7 @@ public class PointsTest {
 
     @Test
     public void testMultiply() {
-        Point result = Points.multiply(getFirstPoint(),getSecondPoint());
+        Point result = Points.multiply(getFirstPoint(), getSecondPoint());
         assertEquals(result.x, 0.54, DELTA);
         assertEquals(result.y, 9.87, DELTA);
         assertEquals(result.z, 26.97, DELTA);
@@ -50,7 +50,7 @@ public class PointsTest {
 
     @Test
     public void testDivide() {
-        Point result = Points.divide(getFirstPoint(),getSecondPoint());
+        Point result = Points.divide(getFirstPoint(), getSecondPoint());
         assertEquals(result.x, 13.5, DELTA);
         assertEquals(result.y, 2.238, DELTA);
         assertEquals(result.z, 0.3118, DELTA);
@@ -60,8 +60,8 @@ public class PointsTest {
     }
 
     @Test
-    public void testEnlarge(){
-        Point result = Points.enlarge(getFirstPoint(),2);
+    public void testEnlarge() {
+        Point result = Points.enlarge(getFirstPoint(), 2);
         assertEquals(result.x, 5.4, DELTA);
         assertEquals(result.y, 9.4, DELTA);
         assertEquals(result.z, 5.8, DELTA);

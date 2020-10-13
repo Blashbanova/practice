@@ -6,7 +6,7 @@ import static org.testng.Assert.*;
 
 public class PersonTest {
     @Test
-    public void testGetSet(){
+    public void testGetSet() {
         Person firstPerson = new Person();
         Person secondPerson = new Person();
 
@@ -18,15 +18,12 @@ public class PersonTest {
         secondPerson.setLastName("Jenner");
         secondPerson.setPassportld(849282);
 
-        assertEquals(firstPerson.getFirstName(),"Bella");
-        assertEquals(firstPerson.getLastName(),"Hadid");
-        assertEquals(firstPerson.getPassportld(),748271);
+        assertEquals(firstPerson.getFirstName(), "Bella");
+        assertEquals(firstPerson.getLastName(), "Hadid");
+        assertEquals(firstPerson.getPassportld(), 748271);
 
-        assertEquals(secondPerson.getFirstName(),"Kendall");
-        assertEquals(secondPerson.getLastName(),"Jenner");
-        assertEquals(secondPerson.getPassportld(),849282);
-
-
+        assertEquals(secondPerson.getFirstName(), "Kendall");
+        assertEquals(secondPerson.getLastName(), "Jenner");
+        assertEquals(secondPerson.getPassportld(), 849282);
     }
-
 }

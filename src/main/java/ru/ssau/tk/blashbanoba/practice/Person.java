@@ -47,5 +47,4 @@ public class Person {
     public void setPassportld(int passportld) {
         this.passportld = passportld;
     }
-
 }
