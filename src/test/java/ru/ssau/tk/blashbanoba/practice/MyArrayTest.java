@@ -43,4 +43,13 @@ public class MyArrayTest {
         assertEquals(array[0], 20);
         assertEquals(array[9], 2);
     }
+
+    @Test
+    public void testSetFibonacciArray() {
+        int[] array = MyArray.setFibonacciArray(10);
+        assertEquals(array.length, 10);
+        assertNotEquals(array.length, Double.NaN);
+        assertEquals(array[0], 0);
+        assertEquals(array[9], 34);
+    }
 }
