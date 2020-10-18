@@ -24,4 +24,14 @@ public class MyArrayTest {
         assertEquals(array[9], 2);
         assertEquals(array[5], 1);
     }
+
+    @Test
+    public void testSetOddArray() {
+        int[] array = MyArray.setOddArray(10);
+        assertEquals(array.length, 10);
+        assertNotEquals(array.length, Double.NaN);
+        assertEquals(array[0], 1);
+        assertEquals(array[5], 11);
+        assertEquals(array[9], 19);
+    }
 }
