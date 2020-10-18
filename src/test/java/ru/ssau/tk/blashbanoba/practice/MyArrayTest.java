@@ -34,4 +34,13 @@ public class MyArrayTest {
         assertEquals(array[5], 11);
         assertEquals(array[9], 19);
     }
+
+    @Test
+    public void testSetEvenArray() {
+        int[] array = MyArray.setEvenArray(10);
+        assertEquals(array.length, 10);
+        assertNotEquals(array.length, Double.NaN);
+        assertEquals(array[0], 20);
+        assertEquals(array[9], 2);
+    }
 }

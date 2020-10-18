@@ -29,4 +29,14 @@ public class MyArray {
         }
         return array;
     }
+
+    public static int[] setEvenArray(int size) {
+        int[] array = new int[size];
+        int count = size * 2;
+        for (int i = 0; i < array.length; i++) {
+            array[i] = count;
+            count = count - 2;
+        }
+        return array;
+    }
 }
