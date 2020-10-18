@@ -11,7 +11,17 @@ public class MyArrayTest {
     @Test
     public void testSetSizeArray() {
         int[] array = MyArray.setSizeArray(10);
-        assertEquals(array.length,10, DELTA);
-        assertNotEquals(array.length,Double.NaN);
+        assertEquals(array.length, 10, DELTA);
+        assertNotEquals(array.length, Double.NaN);
+    }
+
+    @Test
+    public void testSetUnitArray() {
+        int[] array = MyArray.setUnitArray(10);
+        assertEquals(array.length, 10);
+        assertNotEquals(array.length, Double.NaN);
+        assertEquals(array[0], 2);
+        assertEquals(array[9], 2);
+        assertEquals(array[5], 1);
     }
 }
