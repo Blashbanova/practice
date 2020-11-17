@@ -59,4 +59,14 @@ public class MyArrayTest {
         assertEquals(array[5], 25);
         assertEquals(array[9], 81);
     }
+
+    @Test
+    public void testQuadraticSolutionArray() {
+        MyArray array = new MyArray();
+        assertEquals(array.quadraticSolutionArray(1, -4, 4), new double[]{2});
+        assertEquals(array.quadraticSolutionArray(1, -5, 9), new double[0]);
+        assertEquals(array.quadraticSolutionArray(1, 3, -4), new double[]{-4, 1});
+        assertEquals(array.quadraticSolutionArray(0, 2, -8), new double[]{4});
+    }
 }
+
