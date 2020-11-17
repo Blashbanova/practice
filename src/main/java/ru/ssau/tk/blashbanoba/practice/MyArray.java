@@ -49,4 +49,12 @@ public class MyArray {
         }
         return array;
     }
+
+    public static int[] setSqrIndex(int n) {
+        int[] array = new int[n];
+        for (int i = 0; i < n; i++) {
+            array[i] = i * i;
+        }
+        return array;
+    }
 }

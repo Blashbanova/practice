@@ -52,4 +52,11 @@ public class MyArrayTest {
         assertEquals(array[0], 0);
         assertEquals(array[9], 34);
     }
+
+    @Test
+    public void testSetSqrIndex() {
+        int[] array = MyArray.setSqrIndex(10);
+        assertEquals(array[5], 25);
+        assertEquals(array[9], 81);
+    }
 }
