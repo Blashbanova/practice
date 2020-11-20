@@ -78,4 +78,17 @@ public class MyArray {
         }
         return new double[0];
     }
+
+    public int[] arrayNaturalNumbers(int n) {
+        int[] numbersArray = new int[n];
+        int k = 1;
+        for (int i = 0; i < n; i++) {
+            numbersArray[i] = k;
+            k++;
+            if (k % 3 == 0) {
+                k++;
+            }
+        }
+        return numbersArray;
+    }
 }

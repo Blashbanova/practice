@@ -68,5 +68,13 @@ public class MyArrayTest {
         assertEquals(array.quadraticSolutionArray(1, 3, -4), new double[]{-4, 1});
         assertEquals(array.quadraticSolutionArray(0, 2, -8), new double[]{4});
     }
+
+    @Test
+    public void testArrayNaturalNumbers() {
+        MyArray array = new MyArray();
+        assertEquals(array.arrayNaturalNumbers(5), new int[]{1, 2, 4, 5, 7});
+        assertEquals(array.arrayNaturalNumbers(7), new int[]{1, 2, 4, 5, 7, 8, 10});
+        assertEquals(array.arrayNaturalNumbers(9), new int[]{1, 2, 4, 5, 7, 8, 10, 11, 13});
+    }
 }
 
