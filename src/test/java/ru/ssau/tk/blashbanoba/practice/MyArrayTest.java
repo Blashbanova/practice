@@ -76,5 +76,13 @@ public class MyArrayTest {
         assertEquals(array.arrayNaturalNumbers(7), new int[]{1, 2, 4, 5, 7, 8, 10});
         assertEquals(array.arrayNaturalNumbers(9), new int[]{1, 2, 4, 5, 7, 8, 10, 11, 13});
     }
+
+    @Test
+    public void testGetArithmeticProgression() {
+        MyArray array = new MyArray();
+        assertEquals(array.getArithmeticProgression(3, 0, 1), new double[]{0, 1, 2});
+        assertEquals(array.getArithmeticProgression(5, -5, 3), new double[]{-5, -2, 1, 4, 7});
+        assertEquals(array.getArithmeticProgression(2, 6, 4), new double[]{6, 10});
+    }
 }
 
