@@ -2,6 +2,8 @@ package ru.ssau.tk.blashbanoba.practice;
 
 import org.testng.annotations.Test;
 
+import java.util.LinkedList;
+
 import static org.testng.Assert.*;
 
 public class MyArrayTest {
@@ -99,6 +101,23 @@ public class MyArrayTest {
         assertEquals(array.getArrayDivisors(1), new int[]{-1, -1});
         assertEquals(array.getArrayDivisors(3), new int[]{1, -1, -3, 3});
         assertEquals(array.getArrayDivisors(-7), new int[]{1, -1, -7, 7});
+    }
+
+    public LinkedList<Integer> arraySimpleNumbers(int c) {
+        if (c < 2) return new LinkedList<Integer>();
+        LinkedList<Integer> primes = new LinkedList<Integer>();
+        LinkedList<Integer> nums = new LinkedList<Integer>();
+        for (int i = 2; i <= c; i++) {
+            nums.add(i);
+        }
+        while (nums.size() > 0) {
+            int nextPrime = nums.remove();
+            for (int i = nextPrime * nextPrime; i <= c; i += nextPrime) {
+                nums.removeFirstOccurrence(i);
+            }
+            primes.add(nextPrime);
+        }
+        return primes;
     }
 }
 
