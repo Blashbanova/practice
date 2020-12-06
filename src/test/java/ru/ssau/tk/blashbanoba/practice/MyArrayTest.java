@@ -84,5 +84,13 @@ public class MyArrayTest {
         assertEquals(array.getArithmeticProgression(5, -5, 3), new double[]{-5, -2, 1, 4, 7});
         assertEquals(array.getArithmeticProgression(2, 6, 4), new double[]{6, 10});
     }
+
+    @Test
+    public void testGetGeometricProgression() {
+        MyArray array = new MyArray();
+        assertEquals(array.getGeometricProgression(3, 1, 2), new double[]{1, 2, 4});
+        assertEquals(array.getGeometricProgression(5, 3, 0.5), new double[]{3, 1.5, 0.75, 0.375, 0.1875});
+        assertEquals(array.getGeometricProgression(4, -2, -3), new double[]{-2, 6, -18, 54});
+    }
 }
 
