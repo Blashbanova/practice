@@ -91,4 +91,13 @@ public class MyArray {
         }
         return numbersArray;
     }
+
+    public double[] getArithmeticProgression(int n, double a1, double q) {
+        double[] array = new double[n];
+        array[0] = a1;
+        for (int i = 1; i < n; i++) {
+            array[i] = array[i - 1] + q;
+        }
+        return array;
+    }
 }
