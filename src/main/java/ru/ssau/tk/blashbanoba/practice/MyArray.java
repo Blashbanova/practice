@@ -1,5 +1,7 @@
 package ru.ssau.tk.blashbanoba.practice;
 
+import java.util.LinkedList;
+
 import static java.lang.Math.abs;
 import static java.lang.Math.sqrt;
 
@@ -136,5 +138,22 @@ public class MyArray {
             }
         }
         return arrayDivisors;
+    }
+
+    public LinkedList<Integer> arraySimpleNumbers(int c) {
+        if (c < 2) return new LinkedList<Integer>();
+        LinkedList<Integer> primes = new LinkedList<Integer>();
+        LinkedList<Integer> nums = new LinkedList<Integer>();
+        for (int i = 2; i <= c; i++) {
+            nums.add(i);
+        }
+        while (nums.size() > 0) {
+            int nextPrime = nums.remove();
+            for (int i = nextPrime * nextPrime; i <= c; i += nextPrime) {
+                nums.removeFirstOccurrence(i);
+            }
+            primes.add(nextPrime);
+        }
+        return primes;
     }
 }
