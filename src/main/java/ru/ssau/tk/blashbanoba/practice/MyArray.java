@@ -1,5 +1,8 @@
 package ru.ssau.tk.blashbanoba.practice;
 
+import static java.lang.Math.abs;
+import static java.lang.Math.sqrt;
+
 public class MyArray {
 
     public static int[] setSizeArray(int size) {
@@ -67,8 +70,8 @@ public class MyArray {
         }
         if ((D > 0) & (a > 0)) {
             double[] result = new double[2];
-            result[0] = (-b - Math.sqrt(D)) / (2 * a);
-            result[1] = (-b + Math.sqrt(D)) / (2 * a);
+            result[0] = (-b - sqrt(D)) / (2 * a);
+            result[1] = (-b + sqrt(D)) / (2 * a);
             return result;
         }
         if (a == 0) {
@@ -108,5 +111,30 @@ public class MyArray {
             array[i] = array[i - 1] * q;
         }
         return array;
+    }
+
+    public int[] getArrayDivisors(int c) {
+        int count = 0;
+        for (int i= 1; i<= (int) sqrt(abs(c)); i++) {
+            if(abs(c)%i==0){
+                count+=1;
+            }
+        }
+        count = 2 * count - (sqrt(abs(c)) == (int) sqrt(abs(c)) ? 1 : 0);
+        count *= 2;
+        int[] arrayDivisors = new int[count];
+        for (int j = 0, k = 0; j != (int) sqrt(abs(c)); j++) {
+            if (abs(c) % (j + 1) == 0) {
+                arrayDivisors[k] = j + 1;
+                arrayDivisors[count - 1 - k] = abs(c) / (j + 1);
+                k += 1;
+            }
+            if (abs(c) % (j + 1) == 0) {
+                arrayDivisors[k] = -(j + 1);
+                arrayDivisors[count - 1 - k] = -(abs(c) / (j + 1));
+                k += 1;
+            }
+        }
+        return arrayDivisors;
     }
 }
