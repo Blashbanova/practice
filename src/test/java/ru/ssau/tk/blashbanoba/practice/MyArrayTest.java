@@ -92,5 +92,13 @@ public class MyArrayTest {
         assertEquals(array.getGeometricProgression(5, 3, 0.5), new double[]{3, 1.5, 0.75, 0.375, 0.1875});
         assertEquals(array.getGeometricProgression(4, -2, -3), new double[]{-2, 6, -18, 54});
     }
+
+    @Test
+    public void testGetArrayDivisors() {
+        MyArray array = new MyArray();
+        assertEquals(array.getArrayDivisors(1), new int[]{-1, -1});
+        assertEquals(array.getArrayDivisors(3), new int[]{1, -1, -3, 3});
+        assertEquals(array.getArrayDivisors(-7), new int[]{1, -1, -7, 7});
+    }
 }
 
