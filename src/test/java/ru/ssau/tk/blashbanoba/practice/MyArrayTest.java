@@ -129,5 +129,13 @@ public class MyArrayTest {
         assertEquals(array[1], 7);
         assertEquals(array[2], 10);
     }
+
+    @Test
+    public void testFindNumberInArray() {
+        int[] array = {1, 2, 3, 4, 5, 6};
+        assertTrue(MyArray.findNumberInArray(array, 3));
+        assertFalse(MyArray.findNumberInArray(array, 7));
+        assertFalse(MyArray.findNumberInArray(array, 9));
+    }
 }
 

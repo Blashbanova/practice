@@ -188,4 +188,13 @@ public class MyArray {
             array[i] = -1 * array[i];
         }
     }
+
+    static boolean findNumberInArray(int[] array, int n) {
+        for (int j : array) {
+            if (j == n) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
