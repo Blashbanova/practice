@@ -216,4 +216,17 @@ public class MyArray {
         }
         return k;
     }
+
+    public Integer findMax(int[] array) {
+        if (array.length > 0) {
+            int maxValue = array[0];
+            for (int i = 1; i < array.length; i++) {
+                if (array[i] > maxValue) {
+                    maxValue = array[i];
+                }
+            }
+            return maxValue;
+        }
+        return null;
+    }
 }
