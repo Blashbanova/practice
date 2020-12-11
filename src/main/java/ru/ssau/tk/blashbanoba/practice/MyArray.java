@@ -239,4 +239,18 @@ public class MyArray {
         }
         return sum;
     }
+
+    static boolean findMoreDivisors(int[] values) {
+        int k1 = 0;
+        int k2 = 0;
+        for (int value : values) {
+            if (values[0] % value == 0) {
+                k1++;
+            }
+            if (values[values.length - 1] % value == 0) {
+                k2++;
+            }
+        }
+        return k1 > k2;
+    }
 }

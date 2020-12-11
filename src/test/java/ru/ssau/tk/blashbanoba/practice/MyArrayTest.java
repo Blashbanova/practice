@@ -177,5 +177,15 @@ public class MyArrayTest {
         assertEquals(array.sumOfEvenIndex(new int[]{11, 32, 43, -4, 58, -76, 870}), 982);
         assertEquals(array.sumOfEvenIndex(new int[]{-1, 2, -3, 4, -5, 6, -10}), -19);
     }
+
+    @Test
+    public void testFindMoreDivisors() {
+        int[] numbersOne = {27, 3, 9, 8, 2, 4, 6, 12, 24};
+        assertFalse(MyArray.findMoreDivisors(numbersOne));
+        int[] numbersTwo = {12, 4, 3, 2, 6, 1, 17, 18, 25};
+        assertTrue(MyArray.findMoreDivisors(numbersTwo));
+        int[] numbersThree = {27, 3, 9, 8, 6, 12, 24};
+        assertFalse(MyArray.findMoreDivisors(numbersThree));
+    }
 }
 
