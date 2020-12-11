@@ -229,4 +229,14 @@ public class MyArray {
         }
         return null;
     }
+
+    public int sumOfEvenIndex(int[] values) {
+        int sum = 0;
+        for (int i = 0; i < values.length; i++) {
+            if (i % 2 == 0) {
+                sum += values[i];
+            }
+        }
+        return sum;
+    }
 }

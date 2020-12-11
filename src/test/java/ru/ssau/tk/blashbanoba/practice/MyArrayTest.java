@@ -169,5 +169,13 @@ public class MyArrayTest {
         int[] checkNewArray = new int[]{};
         assertNull(array.findMax(checkNewArray));
     }
+
+    @Test
+    public void testSumOfEvenIndex() {
+        MyArray array = new MyArray();
+        assertEquals(array.sumOfEvenIndex(new int[]{1, 2, 3, 4, 5, 6, 11}), 20);
+        assertEquals(array.sumOfEvenIndex(new int[]{11, 32, 43, -4, 58, -76, 870}), 982);
+        assertEquals(array.sumOfEvenIndex(new int[]{-1, 2, -3, 4, -5, 6, -10}), -19);
+    }
 }
 
