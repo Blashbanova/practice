@@ -120,5 +120,14 @@ public class MyArrayTest {
         assertEquals(array.symmetricArray(6), new int[]{1, 2, 3, 3, 2, 1});
         assertEquals(array.symmetricArray(5), new int[]{1, 2, 3, 2, 1});
     }
+
+    @Test
+    public void testChangeSign() {
+        int[] array = {3, -7, -10};
+        MyArray.changeSign(array);
+        assertEquals(array[0], -3);
+        assertEquals(array[1], 7);
+        assertEquals(array[2], 10);
+    }
 }
 

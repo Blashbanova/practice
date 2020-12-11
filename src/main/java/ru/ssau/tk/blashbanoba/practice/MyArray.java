@@ -182,4 +182,10 @@ public class MyArray {
             return symmetric;
         }
     }
+
+    static void changeSign(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            array[i] = -1 * array[i];
+        }
+    }
 }
