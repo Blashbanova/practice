@@ -137,5 +137,15 @@ public class MyArrayTest {
         assertFalse(MyArray.findNumberInArray(array, 7));
         assertFalse(MyArray.findNumberInArray(array, 9));
     }
+
+    @Test
+    public void testCheckNull() {
+        Integer[] array = new Integer[]{2, 5, 6, null};
+        assertTrue(MyArray.checkNull(array));
+        Integer[] arrayOther = new Integer[]{3, 2, 1};
+        assertFalse(MyArray.checkNull(arrayOther));
+        Integer[] arrayNew = new Integer[]{null, 0, 1, null};
+        assertTrue(MyArray.checkNull(arrayNew));
+    }
 }
 

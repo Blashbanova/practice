@@ -197,4 +197,13 @@ public class MyArray {
         }
         return false;
     }
+
+    static boolean checkNull(Integer[] array) {
+        for (Integer integer : array) {
+            if (integer == null) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
