@@ -117,9 +117,9 @@ public class MyArray {
 
     public int[] getArrayDivisors(int c) {
         int count = 0;
-        for (int i= 1; i<= (int) sqrt(abs(c)); i++) {
-            if(abs(c)%i==0){
-                count+=1;
+        for (int i = 1; i <= (int) sqrt(abs(c)); i++) {
+            if (abs(c) % i == 0) {
+                count += 1;
             }
         }
         count = 2 * count - (sqrt(abs(c)) == (int) sqrt(abs(c)) ? 1 : 0);
@@ -155,5 +155,31 @@ public class MyArray {
             primes.add(nextPrime);
         }
         return primes;
+    }
+
+    public int[] symmetricArray(int n) {
+        int[] symmetric = new int[n];
+        if (n % 2 != 0) {
+            for (int i = 0; i <= (n / 2); i++) {
+                symmetric[i] = i + 1;
+            }
+            int k = (n / 2) + 1;
+            for (int j = n / 2 + 1; j < n; j++) {
+                symmetric[j] = k - 1;
+                k--;
+            }
+            return symmetric;
+        }
+        {
+            for (int i = 0; i < (n / 2); i++) {
+                symmetric[i] = i + 1;
+            }
+            int k = (n / 2);
+            for (int j = n / 2; j < n; j++) {
+                symmetric[j] = k;
+                k--;
+            }
+            return symmetric;
+        }
     }
 }

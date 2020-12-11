@@ -112,5 +112,13 @@ public class MyArrayTest {
         checkPrimes.add(5);
         assertEquals(array.arraySimpleNumbers(5), checkPrimes);
     }
+
+    @Test
+    public void testSymmetricArray() {
+        MyArray array = new MyArray();
+        assertEquals(array.symmetricArray(7), new int[]{1, 2, 3, 4, 3, 2, 1});
+        assertEquals(array.symmetricArray(6), new int[]{1, 2, 3, 3, 2, 1});
+        assertEquals(array.symmetricArray(5), new int[]{1, 2, 3, 2, 1});
+    }
 }
 
