@@ -141,9 +141,9 @@ public class MyArray {
     }
 
     public LinkedList<Integer> arraySimpleNumbers(int c) {
-        if (c < 2) return new LinkedList<Integer>();
-        LinkedList<Integer> primes = new LinkedList<Integer>();
-        LinkedList<Integer> nums = new LinkedList<Integer>();
+        if (c < 2) return new LinkedList<>();
+        LinkedList<Integer> primes = new LinkedList<>();
+        LinkedList<Integer> nums = new LinkedList<>();
         for (int i = 2; i <= c; i++) {
             nums.add(i);
         }
@@ -252,5 +252,24 @@ public class MyArray {
             }
         }
         return k1 > k2;
+    }
+
+    public int findMostCommonElement(int[] numbers) {
+        int num = numbers[0];
+        int maxCommon = 1;
+        for (int i = 0; i < numbers.length - 1; i++) {
+            int common = 1;
+            for (int k = i + 1; k < numbers.length; k++) {
+                if (numbers[i] == numbers[k]) {
+                    common += 1;
+                }
+                if (common > maxCommon) {
+                    maxCommon = common;
+                    num = numbers[i];
+                    return numbers[i];
+                }
+            }
+        }
+        return 0;
     }
 }
