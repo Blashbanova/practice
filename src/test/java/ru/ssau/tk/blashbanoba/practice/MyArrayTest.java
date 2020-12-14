@@ -198,5 +198,13 @@ public class MyArrayTest {
         int[] checkNumbersThree = {0, -2, 3, 0, -5, 0, -4, 6, 0, 6};
         assertEquals(check.findMostCommonElement(checkNumbersThree), 0);
     }
+
+    @Test
+    public void testFindIndexOfNumber () {
+        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 20};
+        assertEquals(MyArray.findIndexOfNumber(array, 5), 4);
+        assertEquals(MyArray.findIndexOfNumber(array, 11), 10);
+        assertEquals(MyArray.findIndexOfNumber(array, 20), 14);
+    }
 }
 

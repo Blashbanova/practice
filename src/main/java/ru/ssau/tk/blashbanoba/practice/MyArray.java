@@ -272,4 +272,13 @@ public class MyArray {
         }
         return 0;
     }
+
+    static int findIndexOfNumber(int[] values, int c) {
+        for (int i = 0; i < values.length; i++) {
+            if (values[i] == c) {
+                return i;
+            }
+        }
+        return 0;
+    }
 }
