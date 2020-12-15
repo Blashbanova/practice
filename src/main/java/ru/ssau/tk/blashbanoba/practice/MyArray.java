@@ -300,4 +300,10 @@ public class MyArray {
         array[indexMax] = min;
         array[indexMin] = max;
     }
+
+    static void bitwiseNOT(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            array[i] = ~array[i];
+        }
+    }
 }

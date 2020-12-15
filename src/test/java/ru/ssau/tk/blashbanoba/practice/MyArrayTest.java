@@ -219,5 +219,17 @@ public class MyArrayTest {
         MyArray.exchangedMaxAndMin(arrayThird);
         assertEquals(arrayThird, new int[]{7, 0, 2, 0, 0});
     }
+
+    @Test
+    public void testBitwiseNOT() {
+        int[] array = {12, 15, 56};
+        MyArray.bitwiseNOT(array);
+        assertEquals(array, new int[]{-13, -16, -57});
+        MyArray.bitwiseNOT(array);
+        assertEquals(array, new int[]{12, 15, 56});
+        int[] newArray = {-2, 5, -6};
+        MyArray.bitwiseNOT(newArray);
+        assertEquals(newArray, new int[]{1, -6, 5});
+    }
 }
 
