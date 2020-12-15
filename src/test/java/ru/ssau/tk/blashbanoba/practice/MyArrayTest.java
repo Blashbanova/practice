@@ -241,5 +241,12 @@ public class MyArrayTest {
         int[] yesArrayTwo = {17, -1, 2, 4};
         assertEquals(array.arrayBitwiseNot(yesArrayTwo), new int[]{-18, 0, -3, -5});
     }
+
+    @Test
+    public void testSumNextElements() {
+        assertEquals(MyArray.sumNextElements(new int[]{10, 20, 30}), new int[]{30, 30});
+        assertEquals(MyArray.sumNextElements(new int[]{0, -7, 30}), new int[]{-7, 30});
+        assertEquals(MyArray.sumNextElements(new int[]{1, 2, 3, 4, -8, 0, 9}), new int[]{3, 7, -8, 9});
+    }
 }
 
