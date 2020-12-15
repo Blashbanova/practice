@@ -106,7 +106,7 @@ public class MyArrayTest {
     @Test
     public void testArraySimpleNumbers() {
         MyArray array = new MyArray();
-        LinkedList<Integer> checkPrimes = new LinkedList<Integer>();
+        LinkedList<Integer> checkPrimes = new LinkedList<>();
         checkPrimes.add(2);
         checkPrimes.add(3);
         checkPrimes.add(5);
@@ -200,11 +200,24 @@ public class MyArrayTest {
     }
 
     @Test
-    public void testFindIndexOfNumber () {
+    public void testFindIndexOfNumber() {
         int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 20};
         assertEquals(MyArray.findIndexOfNumber(array, 5), 4);
         assertEquals(MyArray.findIndexOfNumber(array, 11), 10);
         assertEquals(MyArray.findIndexOfNumber(array, 20), 14);
+    }
+
+    @Test
+    public void testExchangedMaxAndMin() {
+        int[] arrayFirst = {1, 2, 3, 5, 6};
+        MyArray.exchangedMaxAndMin(arrayFirst);
+        assertEquals(arrayFirst, new int[]{6, 2, 3, 5, 1});
+        int[] arraySecond = {9};
+        MyArray.exchangedMaxAndMin(arraySecond);
+        assertEquals(arraySecond, new int[]{9});
+        int[] arrayThird = {0, 0, 2, 0, 7};
+        MyArray.exchangedMaxAndMin(arrayThird);
+        assertEquals(arrayThird, new int[]{7, 0, 2, 0, 0});
     }
 }
 
