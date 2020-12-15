@@ -256,5 +256,12 @@ public class MyArrayTest {
         assertEquals(MyArray.findEvenNumbers(new int[]{1, 3, 5, 7, 9}), new boolean[]{false, false, false, false, false});
         assertEquals(MyArray.findEvenNumbers(new int[]{-1, 3, -5, 4, 0}), new boolean[]{false, false, false, true, true});
     }
-}
 
+    @Test
+    public void testConvertLongToTwoInts() {
+        assertEquals(MyArray.convertLongToTwoInts(-2L), new int[]{-1, -2});
+        assertEquals(MyArray.convertLongToTwoInts(126L), new int[]{0, 126});
+        assertEquals(MyArray.convertLongToTwoInts(1L), new int[]{0, 1});
+        assertEquals(MyArray.convertLongToTwoInts(0), new int[]{0, 0});
+    }
+}
