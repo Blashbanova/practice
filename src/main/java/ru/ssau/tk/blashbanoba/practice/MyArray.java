@@ -350,4 +350,16 @@ public class MyArray {
     public static long convertTwoIntsToLong(int first, int last) {
         return ((long) last | (long) first << 32);
     }
+
+    public static int[] getCycleOfNaturalNumbers(int size, int startingIndex) {
+        if (startingIndex < 0 || startingIndex >= size) {
+            throw new IllegalArgumentException("Invalid starting index!");
+        }
+        int[] array = new int[size];
+        int diff = startingIndex - 1;
+        for (int i = 0; i != size; i++, startingIndex++) {
+            array[startingIndex % size] = startingIndex - diff;
+        }
+        return array;
+    }
 }

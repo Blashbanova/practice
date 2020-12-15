@@ -264,4 +264,20 @@ public class MyArrayTest {
         assertEquals(MyArray.convertLongToTwoInts(1L), new int[]{0, 1});
         assertEquals(MyArray.convertLongToTwoInts(0), new int[]{0, 0});
     }
+
+    @Test
+    public void testConvertTwoIntsToLong() {
+        assertEquals(MyArray.convertTwoIntsToLong(1, -2), -2);
+        assertEquals(MyArray.convertTwoIntsToLong(2, 2), 8589934594L);
+        assertEquals(MyArray.convertTwoIntsToLong(0, 1), 1);
+    }
+
+    @Test
+    public void testGetCycleOfNaturalNumbers() {                                
+        assertEquals(MyArray.getCycleOfNaturalNumbers(5, 3), new int[]{3, 4, 5, 1, 2});
+        assertEquals(MyArray.getCycleOfNaturalNumbers(1, 0), new int[]{1});
+        assertEquals(MyArray.getCycleOfNaturalNumbers(5, 4), new int[]{2, 3, 4, 5, 1});
+        assertEquals(MyArray.getCycleOfNaturalNumbers(7, 6), new int[]{2, 3, 4, 5, 6, 7, 1});
+        assertEquals(MyArray.getCycleOfNaturalNumbers(3, 1), new int[]{3, 1, 2});
+    }
 }
