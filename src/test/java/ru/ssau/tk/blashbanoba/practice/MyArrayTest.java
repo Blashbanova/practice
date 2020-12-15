@@ -231,5 +231,15 @@ public class MyArrayTest {
         MyArray.bitwiseNOT(newArray);
         assertEquals(newArray, new int[]{1, -6, 5});
     }
+
+    @Test
+    public void testArrayBitwiseNot() {
+        int[] yesArray = {7, 16, -9};
+        MyArray array = new MyArray();
+        assertEquals(array.arrayBitwiseNot(yesArray), new int[]{-8, -17, 8});
+        assertEquals(array.arrayBitwiseNot(array.arrayBitwiseNot(yesArray)), new int[]{7, 16, -9});
+        int[] yesArrayTwo = {17, -1, 2, 4};
+        assertEquals(array.arrayBitwiseNot(yesArrayTwo), new int[]{-18, 0, -3, -5});
+    }
 }
 
