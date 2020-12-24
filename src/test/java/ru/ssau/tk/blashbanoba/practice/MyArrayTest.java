@@ -280,4 +280,12 @@ public class MyArrayTest {
         assertEquals(MyArray.getCycleOfNaturalNumbers(7, 6), new int[]{2, 3, 4, 5, 6, 7, 1});
         assertEquals(MyArray.getCycleOfNaturalNumbers(3, 1), new int[]{3, 1, 2});
     }
+
+    @Test
+    public void testCreateTwoDimensionalArray() {
+        assertEquals(MyArray.createTwoDimensionalArray(3), new int[][]{{1, 2, 3}, {4, 5}, {6}});
+        assertEquals(MyArray.createTwoDimensionalArray(2), new int[][]{{1, 2}, {3}});
+        assertEquals(MyArray.createTwoDimensionalArray(1), new int[][]{{1}});
+        assertEquals(MyArray.createTwoDimensionalArray(5), new int[][]{{1, 2, 3, 4, 5}, {6, 7, 8, 9}, {10, 11, 12}, {13, 14}, {15}});
+    }
 }
