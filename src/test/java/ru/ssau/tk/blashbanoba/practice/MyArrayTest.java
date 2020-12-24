@@ -273,7 +273,7 @@ public class MyArrayTest {
     }
 
     @Test
-    public void testGetCycleOfNaturalNumbers() {                                
+    public void testGetCycleOfNaturalNumbers() {
         assertEquals(MyArray.getCycleOfNaturalNumbers(5, 3), new int[]{3, 4, 5, 1, 2});
         assertEquals(MyArray.getCycleOfNaturalNumbers(1, 0), new int[]{1});
         assertEquals(MyArray.getCycleOfNaturalNumbers(5, 4), new int[]{2, 3, 4, 5, 1});
@@ -287,5 +287,22 @@ public class MyArrayTest {
         assertEquals(MyArray.createTwoDimensionalArray(2), new int[][]{{1, 2}, {3}});
         assertEquals(MyArray.createTwoDimensionalArray(1), new int[][]{{1}});
         assertEquals(MyArray.createTwoDimensionalArray(5), new int[][]{{1, 2, 3, 4, 5}, {6, 7, 8, 9}, {10, 11, 12}, {13, 14}, {15}});
+    }
+
+    @Test
+    public void testSortWithoutNaN() {
+        double[] array = {5.5, 1, 0, 6};
+        MyArray.sortWithoutNaN(array);
+        assertEquals(array, new double[]{0, 1, 5.5, 6});
+
+        double[] arrayOne = new double[2];
+        arrayOne[0] = 1;
+        arrayOne[1] = Double.NaN;
+        MyArray.sortWithoutNaN(arrayOne);
+        assertEquals(arrayOne[0], 1);
+
+        double[] arrayTwo = {1.4, 2.3, 4.5, Double.NaN, 7.9, Double.NaN, 11, Double.NaN, -8};
+        MyArray.sortWithoutNaN(arrayTwo);
+        assertEquals(arrayTwo, new double[]{1.4, 2.3, 4.5, Double.NaN, 7.9, Double.NaN, 11, Double.NaN, -8});
     }
 }
