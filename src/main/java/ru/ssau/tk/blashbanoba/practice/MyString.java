@@ -15,10 +15,20 @@ public class MyString {
         }
     }
 
+    public void sameStrings() {
+        String s1 = "A";
+        String s2 = new String(s1);
+        System.out.println(s1 == s2);
+        System.out.println(s1.equals(s2));
+    }
+
     public static void main(String[] args) {
         MyString string = new MyString();
+        /*
         string.getArrayOfBytes("проверка");
         System.out.println(" ");
-        string.getArrayOfBytes("something");
+        string.getArrayOfBytes("something");*/
+
+        string.sameStrings();
     }
 }
