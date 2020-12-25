@@ -31,6 +31,17 @@ public class MyString {
         return strFirst.equalsIgnoreCase(strSecond) && !strFirst.equals(strSecond);
     }
 
+    public static void learningCharacterEscaping() {
+        int i = 0;
+        System.out.println("Символ\t№" + ++i);   //символ табуляции
+        System.out.println("Символ\b№" + ++i);   //символ удаления последнего символа в строке
+        System.out.println("Символ\n№" + ++i);   //символ перехода на новую строку
+        System.out.println("Символ\r№" + ++i);   //не выводить элементы в строке до символа
+        System.out.println("Символ\'№" + ++i);   //вывести ', а не считать ее частью кода
+        System.out.println("Символ\"№" + ++i);   //вывести "
+        System.out.println("Символ\\№" + ++i);   //вывести \, а не считать ее частью кода
+    }
+
     public static void main(String[] args) {
         MyString string = new MyString();
         /*
@@ -40,8 +51,10 @@ public class MyString {
 
         string.sameStrings();
 
-        System.out.println(string.isPalindrome("121"));*/
+        System.out.println(string.isPalindrome("121"));
 
-        System.out.println(string.isSameRegister("aaa", "Aaa"));
+        System.out.println(string.isSameRegister("aaa", "Aaa"));*/
+
+        learningCharacterEscaping();
     }
 }
