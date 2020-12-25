@@ -22,13 +22,20 @@ public class MyString {
         System.out.println(s1.equals(s2));
     }
 
+    public boolean isPalindrome(String str) {
+        String palindrome = new StringBuilder(str).reverse().toString();
+        return str.equals(palindrome);
+    }
+
     public static void main(String[] args) {
         MyString string = new MyString();
         /*
         string.getArrayOfBytes("проверка");
         System.out.println(" ");
-        string.getArrayOfBytes("something");*/
+        string.getArrayOfBytes("something");
 
-        string.sameStrings();
+        string.sameStrings();*/
+
+       System.out.println(string.isPalindrome("121"));
     }
 }
