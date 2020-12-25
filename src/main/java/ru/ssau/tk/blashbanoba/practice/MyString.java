@@ -27,6 +27,10 @@ public class MyString {
         return str.equals(palindrome);
     }
 
+    public boolean isSameRegister(String strFirst, String strSecond) {
+        return strFirst.equalsIgnoreCase(strSecond) && !strFirst.equals(strSecond);
+    }
+
     public static void main(String[] args) {
         MyString string = new MyString();
         /*
@@ -34,8 +38,10 @@ public class MyString {
         System.out.println(" ");
         string.getArrayOfBytes("something");
 
-        string.sameStrings();*/
+        string.sameStrings();
 
-       System.out.println(string.isPalindrome("121"));
+        System.out.println(string.isPalindrome("121"));*/
+
+        System.out.println(string.isSameRegister("aaa", "Aaa"));
     }
 }

@@ -17,4 +17,16 @@ public class MyStringTest {
         assertFalse(string.isPalindrome("AbC"));
         assertFalse(string.isPalindrome("Aaa"));
     }
+
+    @Test
+    public void testIsSameRegister() {
+        assertFalse(string.isSameRegister("111", "111"));
+        assertTrue(string.isSameRegister("AAA", "aaa"));
+        assertTrue(string.isSameRegister("AaA", "aaA"));
+        assertTrue(string.isSameRegister("Aaa", "aaa"));
+        assertTrue(string.isSameRegister("bbb", "BBB"));
+        assertFalse(string.isSameRegister("AAA", "aa"));
+        assertFalse(string.isSameRegister("", "aaa"));
+        assertFalse(string.isSameRegister("", ""));
+    }
 }
